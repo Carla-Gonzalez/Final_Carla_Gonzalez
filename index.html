@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mi Diario de Viajes 🌍</title>
+
+  <!-- CSS externo -->
+  <link rel="stylesheet" href="estilos.css">
+
+  <!-- Librería jQuery -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+          crossorigin="anonymous"></script>
+
+  <!-- JS externo -->
+  <script defer src="app.js"></script>
+</head>
+
+<body>
+ <header class="hero">
+  <nav class="top-nav container">
+    <div class="logo">
+      <span class="logo-icon">✈️💛</span>
+      <span class="logo-text">ViajeConmigo</span>
+</div>
+    <ul class="nav-links">
+      <li><button id="hero-nav-list" class="ghost">Mis Viajes</button></li>
+      <li><button id="hero-nav-new" class="ghost">Agregar</button></li>
+      <li><button id="btn-info" class="ghost">Info</button></li>
+    </ul>
+  </nav>
+
+  <div class="hero-content">
+    <h1>Descubre tus aventuras ✈️</h1>
+    <p>Guarda tus viajes favoritos y revive cada momento.</p>
+    <button id="scroll-main" class="primary">Ver Viajes</button>
+  </div>
+</header>
+
+  <main class="container">
+    <!-- Navegación principal -->
+    <nav class="card nav-bar">
+      <button id="nav-list" class="ghost">🌎 Ver Viajes</button>
+      <button id="nav-new" class="primary">✈️ Nuevo Viaje</button>
+    </nav>
+
+    <section class="grid">
+      <!-- Listado de viajes -->
+      <section id="view-list" class="card">
+        <h2>Mis viajes</h2>
+        <p class="small muted">Tus recuerdos guardados localmente</p>
+        <div id="trips-list" class="list"></div>
+      </section>
+
+      <!-- Formulario para agregar / editar viajes -->
+      <aside id="view-form" class="card">
+        <h2>Agregar / Editar viaje</h2>
+        <form id="trip-form">
+          <input type="hidden" id="trip-id">
+
+          <label for="trip-title">Título del viaje</label>
+          <input id="trip-title" placeholder="Ej: Aventura en Bariloche" required>
+
+          <label for="trip-location">Destino</label>
+          <input id="trip-location" placeholder="Ej: San Carlos de Bariloche">
+
+          <label for="trip-date">Fecha del viaje</label>
+          <input type="date" id="trip-date">
+
+          <label for="trip-video">Video (opcional, enlace de YouTube)</label>
+          <input id="trip-video" placeholder="https://www.youtube.com/...">
+
+          <label for="trip-notes">Descripción o recuerdos</label>
+          <textarea id="trip-notes" placeholder="¿Qué experiencias viviste?"></textarea>
+
+          <div class="actions">
+            <button type="submit" class="primary">Guardar</button>
+            <button type="button" id="btn-clear" class="ghost">Limpiar</button>
+            <span id="form-status" class="small muted"></span>
+          </div>
+        </form>
+      </aside>
+    </section>
+
+    <!-- Modal con info del grupo -->
+   <div class="overlay" id="overlay">
+  <div class="modal">
+    <h3>👥 Información</h3>
+
+    <div class="member">
+      <img src="Imagenes/Carla.jpeg" alt="Carla Gonzalez" class="profile-pic">
+      <div class="member-info">
+        <p><strong>Integrante:</strong> Carla Gonzalez</p>
+        <p class="small muted">Diseño Multimedial</p>
+      </div>
+    </div>
+
+    <ul class="info-list">
+      <li><strong>Materia:</strong> Diseño y Programación Web I</li>
+      <li><strong>Año:</strong> 2023</li>
+      <li><strong>Cuatrimestre:</strong> 3er cuatrimestre</li>
+      <li><strong>Docente:</strong> Omar Toyos</li>
+      <li><strong>Carácter de entrega:</strong> FINAL</li>
+    </ul>
+
+    <button id="modal-close" class="ghost">Cerrar</button>
+  </div>
+</div>
+
+    <footer class="muted small">
+      🌍 Tus recuerdos se guardan localmente. No se requiere conexión ni registro.
+    </footer>
+  </main>
+</body>
+</html>
+
