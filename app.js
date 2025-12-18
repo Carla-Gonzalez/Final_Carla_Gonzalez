@@ -247,7 +247,7 @@ $(document).ready(function() {
       title: "Primer viaje de ejemplo",
       location: "Mendoza, Argentina",
       date: "2024-02-14",
-      video: "https://www.youtube.com/watch?v=ysz5S6PUM-U",
+      video: "https://www.youtube.com/watch?v=3BTXeKqM3_c",
       notes: "Un viaje increíble por la cordillera. Disfruté el vino y la montaña.",
       createdAt: new Date().toISOString()
     };
@@ -257,4 +257,5 @@ $(document).ready(function() {
 
   renderTrips();
 });
+
 
